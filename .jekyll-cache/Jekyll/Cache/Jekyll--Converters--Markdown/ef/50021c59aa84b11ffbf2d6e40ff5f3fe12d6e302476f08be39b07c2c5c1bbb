@@ -1,0 +1,53 @@
+I"2<h1 id="killed-error-during-make">“Killed” error during make</h1>
+
+<p>When I tried to compile and install libtorrent on CentOS 7 server, I got a “Killed” error like this</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>g++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h1 id="memory-exhausted-during-compiling-process">Memory exhausted during compiling process</h1>
+
+<p>Thanks <a href="https://stackoverflow.com/users/5841226/jon-combe">Jon Combe</a> from <a href="https://stackoverflow.com/questions/30887143/make-j-8-g-internal-compiler-error-killed-program-cc1plus">Stack Overflow</a>. It occurred me that perhaps the memory isn’t sufficient. Due to the VPS environment, there is only 500 Mb of RAM and 256Mb of swap in total.</p>
+
+<p>Of course, the most easiest way to solve this problem, is to pay more money to the VPS provider. But there’s another way.</p>
+
+<h1 id="detect-if-the-memory-is-insufficient">Detect if the memory is insufficient</h1>
+
+<p>After the make process exited with “Killed” error, run <code class="highlighter-rouge">dmesg</code> immediately to show kernel message. And if you found something like <code class="highlighter-rouge">Out of memory: Kill process 23747 (cc1plus)</code>, that means the problem is just what we are talking about.</p>
+
+<p>You can also run <code class="highlighter-rouge">make</code> in the background, run <code class="highlighter-rouge">df -lh</code> repeatedly.</p>
+
+<h1 id="spare-some-space-in-your-storage-to-swap">Spare some space in your storage to swap</h1>
+
+<p>First, make a disk image using dd</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>dd if=/dev/zero of=/swapfile bs=64M count=16
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Change <code class="highlighter-rouge">count=16</code> to a larger number if more swap space is required.</p>
+
+<p>Then, run</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>mkswap /swapfile
+swapon /swapfile
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Run <code class="highlighter-rouge">df -lh</code> to show the new RAM and swap status.</p>
+
+<h1 id="clean-after-use">Clean after use</h1>
+
+<p>After compiling, remember to delete the swap image to free your disk space.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>swapoff /swapfile
+rm /swapfile
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+:ET
