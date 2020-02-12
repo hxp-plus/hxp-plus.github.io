@@ -60,3 +60,79 @@ And install BlackArch again
 ``` shell
 sudo pacman -S blackarch
 ```
+
+Then I experienced "failed to commit transaction" errors.
+
+``` shell
+python-quart: /usr/lib/python3.8/site-packages/quart/wrappers/__pycache__/__init__.cpython-38.pyc exists in filesystem
+python-quart: /usr/lib/python3.8/site-packages/quart/wrappers/__pycache__/request.cpython-38.pyc exists in filesystem
+python-quart: /usr/lib/python3.8/site-packages/quart/wrappers/__pycache__/response.cpython-38.pyc exists in filesystem
+python-quart: /usr/lib/python3.8/site-packages/quart/wrappers/request.py exists in filesystem
+python-quart: /usr/lib/python3.8/site-packages/quart/wrappers/response.py exists in filesystem
+python-pypng: /usr/bin/prichunkpng exists in filesystem
+python-pypng: /usr/bin/priforgepng exists in filesystem
+python-pypng: /usr/bin/prigreypng exists in filesystem
+python-pypng: /usr/bin/pripalpng exists in filesystem
+python-pypng: /usr/bin/pripamtopng exists in filesystem
+python-pypng: /usr/bin/pripnglsch exists in filesystem
+python-pypng: /usr/bin/pripngtopam exists in filesystem
+python-pypng: /usr/bin/priweavepng exists in filesystem
+```
+
+One solution is to run
+
+``` shell
+sudo pacman -Syyu --needed blackarch --overwrite='*'
+```
+
+But strangely it did not work for me.
+
+I ran
+
+``` shell
+pip freeze > requirements.txt
+pip uninstall -r requirements.txt -y
+pip freeze | xargs pip uninstall -y
+```
+
+And if `pip` fails, replace it with `python -m pip`
+
+Then came another error
+
+``` shell
+ERROR: Cannot uninstall 'chrome-gnome-shell'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+
+error: failed to commit transaction (conflicting files)
+/usr/lib/python3.8/site-packages/tests/__init__.py exists in both 'python-telethon' and 'quark-engine'
+/usr/lib/python3.8/site-packages/tests/__pycache__/__init__.cpython-38.opt-1.pyc exists in both 'python-telethon' and 'quark-engine'
+/usr/lib/python3.8/site-packages/tests/__pycache__/__init__.cpython-38.pyc exists in both 'python-telethon' and 'quark-engine'
+Errors occurred, no packages were upgraded.
+```
+
+I tried
+
+``` shell
+sudo pacman -S --overwrite python-telethon quark-engine
+```
+
+as usual, but this error appeared again after I hit Enter.
+
+I decided to install then independently, and solve the conflict manually.
+
+``` shell
+sudo pacman -S quark-engine
+sudo rm /usr/lib/python3.8/site-packages/tests/__init__.py
+sudo rm /usr/lib/python3.8/site-packages/tests/__pycache__/__init__.cpython-38.opt-1.pyc
+sudo rm /usr/lib/python3.8/site-packages/tests/__pycache__/__init__.cpython-38.pyc
+sudo pacman -S python-telethon
+```
+
+It works!
+
+After all, there were no more conflicts and errors.
+
+``` shell
+sudo pacman -S blackarch
+```
+
+ran correctly.
