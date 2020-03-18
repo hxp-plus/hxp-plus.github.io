@@ -1,11 +1,11 @@
 # Site settings
 title: hxp-blog
-SEOTitle: hxp的博客 | hxp-blog
-header-img: img/home-bg.jpg
+SEOTitle: hxp+ | hxp-blog
+header-img: 
 email: hxp201406@gmail.com
 description: ""
 keyword: ""
-url: "https://dev-hxp.github.io"              # your host, for absolute URL
+url: "https://hxp-plus.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -15,7 +15,7 @@ future: true
 RSS: false
 #weibo_username:     
 #zhihu_username:     
-github_username:      dev-hxp  
+github_username:      hxp-plus 
 #twitter_username:   
 #facebook_username:  
 #linkedin_username:  
