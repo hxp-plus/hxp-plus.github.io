@@ -19,7 +19,7 @@ This passage is based on my experience on SRX240H, but it should work on any oth
 
 If you don't want to see many many explanations, the only chapter that is essential to view is this chapter.
 
-1. Firstly, a 2G DDR2 memory (2Rx8) is needed, a 667MHz one is better. (Mine frequency is 667MHz, I'm not sure whether 800MHz works. If you have more money, buy it and test yourself :) .)
+1. Firstly, a 2G DDR2 memory (2Rx8) is needed, a 667MHz one is better. (In my case, my memory's frequency is 667MHz, I'm not sure whether 800MHz works. If you have more money, buy it and test yourself :) .)
 
 2. Download the OS you need from Juniper Website, which should be named like `junos-xxxxx.tgz`.
 
@@ -67,6 +67,6 @@ If you don't want to see many many explanations, the only chapter that is essent
 
 As you can see, `official new OS package` don't allow you to install them on old devices. BUT these limits are only wrote in the pre-install script files. If you modify the script files, these limits are no longer be limits.
 
-Also, why I emphasize the order to replace the memory and installation of OS, that is the old OSes doesn't support 2G RAM, but the new OSes "support" 1G RAM(At least you **CAN** boot up). If you install memory first, you **EVEN CANNOT BOOT INTO THE OS**. Although you can install OS via bootloader, but the bootloader load another pre-install binary file to run the pre-install actions. Notwithstanding you can modify this binary file by some hex editors, but I tried, and failed to boot the installation process(It said something wrong with the hardware watchdog, but I can't search the cause of this on google. If you are interested, you can try it yourself and tell me how)
+Also, why I emphasize the order to replace the memory and installation of OS, that is the old OSes doesn't support 2G RAM, but the new OSes "support" 1G RAM(At least you **CAN** boot up). If you install memory first, you **EVEN CANNOT BOOT INTO THE OS**. Although you can install OS via bootloader, but the bootloader load another pre-install binary file to run the pre-install actions. Notwithstanding you can modify this binary file by some hex editors, but I tried, and failed to boot the installation process (It said something wrong with the hardware watchdog, but I can't search the cause of this on google. If you are interested, you can try it yourself and tell me how)
 
 That's simple enough, isn't it?
