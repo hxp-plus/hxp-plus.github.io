@@ -61,4 +61,12 @@ If you don't want to see many many explanations, the only chapter that is essent
 
 14. After a few reboots, you may try to login. If no error occurs (If any, reboot again), congratulations! The newer version of OS on SRX series is installed successfully!
 
-15. Your conf files should exist, and you can now use the J-Web to manage the switch (The old version of OS's J-Web had bugs that prevents you from signing in)! (Notice: use other browsers rather than Firefox. My Firefox encountered errors, I'm not sure if it was caused by an extension problem)
+15. Your conf files should exist, and you can now use the J-Web to manage the switch (The old version of OS's J-Web had bugs that prevents you from signing in)! (Notice: use other browsers rather than Firefox. My Firefox encountered errors, I'm not sure if it was caused by extension(s)' problem)
+
+## 3.Principle
+
+As you can see, `official new OS package` don't allow you to install them on old devices. BUT these limits are only wrote in the pre-install script files. If you modify the script files, these limits are no longer be limits.
+
+Also, why I emphasize the order to replace the memory and installation of OS, that is the old OSes doesn't support 2G RAM, but the new OSes "support" 1G RAM(At least you **CAN** boot up). If you install memory first, you **EVEN CANNOT BOOT INTO THE OS**. Although you can install OS via bootloader, but the bootloader load another pre-install binary file to run the pre-install actions. Notwithstanding you can modify this binary file by some hex editors, but I tried, and failed to boot the installation process(It said something wrong with the hardware watchdog, but I can't search the cause of this on google. If you are interested, you can try it yourself and tell me how)
+
+That's simple enough, isn't it?
