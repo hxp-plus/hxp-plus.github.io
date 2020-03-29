@@ -45,7 +45,7 @@ If you don't want to see many many explanations, the only chapter that is essent
 
 6. Repack the tgz file with original orders (Someone said if you just repack but didn't pack in order, the system cannot find the kernel, I tested by replacing files in 7z, it sucks. I don't know how to repack them in order. Although someone said you can use 'tar -tvvf', also, I don't know whether it will work. Test yourself. After install, if the system tells you that it cannot find the kernel, that's probably because you repacked the package incorrectly.)
 
-7. That's all, at this time, your switch should be able to use the 1G DDR2 memory. But if you replace the memory prematurely, you won't boot into the system (The old system didn't have the 2G memory profile, you will suck into the db debug mode.)
+7. That's all, at this time, your switch may still be using the 1G DDR2 memory. But if you replace the memory prematurely, you won't boot into the system (The old system didn't have the 2G memory profile, you will suck into the db debug mode.)
 
 8. Put the modified OS pack into your device, whether by sftp or a USB pen drive.
 
