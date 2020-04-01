@@ -5,7 +5,7 @@ subtitle: ''
 author: "hxp"
 header-style: text
 tags:
-- WMware
+- VMware
 ---
 
 To install WMware Workstation Pro on Arch Linux, DO NOT download the bundle file on the official website. I tired, but I suspect the installer is incompatible with Arch Linux.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solution to not displaying Chinese in CTEX"
+title: "Solution to not displaying Chinese in CTeX"
 subtitle: 'Fix font error in Linux'
 author: "hxp"
 header-style: text
