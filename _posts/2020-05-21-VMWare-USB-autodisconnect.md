@@ -18,4 +18,4 @@ We appreciate your contribution.
 
 任何问题：<https://github.com/hxp-plus/hxp-plus.github.io/issues>
 
-感谢您的共献
+感谢您的贡献
