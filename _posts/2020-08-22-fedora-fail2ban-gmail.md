@@ -8,7 +8,7 @@ tags:
 - Server Security
 ---
 
-## Step 0: Install fial2ban
+## Step 0: Install fail2ban
 
 ```
 yum install fail2ban
