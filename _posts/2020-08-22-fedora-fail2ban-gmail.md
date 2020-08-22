@@ -1,4 +1,4 @@
-# Setting up fail2ban with Gmail notification to secure your server from brute force
+# Setting up fail2ban with Gmail notification to secure your Fedora server from brute force
 
 ## Step 0: Install fial2ban
 
