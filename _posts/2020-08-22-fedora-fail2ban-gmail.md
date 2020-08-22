@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Setting up fail2ban with Gmail notification to secure your Fedora server from brute force"
+subtitle: 'Configure fail2ban and sendmail with Gmail on Fedora 29'
+author: "hxp"
+header-style: text
+tags:
+- Server Security
+---
+
 # Setting up fail2ban with Gmail notification to secure your Fedora server from brute force
 
 ## Step 0: Install fial2ban
