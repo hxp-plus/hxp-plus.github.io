@@ -10,8 +10,6 @@ tags:
 - Linux
 ---
 
-# Containerize MATLAB with systemd-nspawn
-
 ## Set up Debian 9 environment
 
 Change directory
