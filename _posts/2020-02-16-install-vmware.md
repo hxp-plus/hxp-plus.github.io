@@ -2,7 +2,7 @@
 layout: post
 title: "Install VMware Workstation Pro on Arch Linux"
 subtitle: ''
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - VMware

@@ -2,7 +2,7 @@
 layout: post
 title: "Solution to not displaying Chinese in CTeX"
 subtitle: 'Fix font error in Linux'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - Linux

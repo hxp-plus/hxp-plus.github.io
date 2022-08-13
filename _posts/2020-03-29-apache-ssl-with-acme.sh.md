@@ -2,7 +2,7 @@
 layout: post
 title: "Configuring SSL on Apache Server with acme.sh"
 subtitle: 'Ways to issue and auto renew SSL cert and install it on Apache Server'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - Apache

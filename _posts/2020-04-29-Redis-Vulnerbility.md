@@ -2,7 +2,7 @@
 layout: post
 title: "Redis Get Shell Vulnerability Reproduction"
 subtitle: ''
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - Redis

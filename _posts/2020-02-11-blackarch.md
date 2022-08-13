@@ -2,7 +2,7 @@
 layout: post
 title: "Some notes on BlackArch Linux upgrading"
 subtitle: 'Upgrade Arch Linux to BlackArch Linux for penetrate testing'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - Linux 

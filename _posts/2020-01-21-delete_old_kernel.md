@@ -2,7 +2,7 @@
 layout: post
 title: "Way to delete old kernel and release disk space in /boot"
 subtitle: 'Solving apt malfuction error'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
   - Linux

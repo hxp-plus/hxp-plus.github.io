@@ -2,7 +2,7 @@
 layout: post
 title: "Containerize MATLAB with systemd-nspawn"
 subtitle: 'Install MATLAB in Debian container inside Arch Linux to avoid compatibility bugs'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
 - MATLAB

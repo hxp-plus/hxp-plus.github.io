@@ -2,7 +2,7 @@
 layout: post
 title: "Adding swap temporarily on Linux VPS"
 subtitle: 'Solving "Killed" error during make'
-author: "hxp"
+author: "Xiping Hu"
 header-style: text
 tags:
   - Linux
