@@ -162,9 +162,7 @@ echo "/dev/sda2 / ext4 defaults 0 0" >> /etc/fstab
 ## Host and domain information
 
 ```bash
-echo "hostname=\"hxp-server\"" > /etc/conf.d/hostname
-echo "dns_domain_lo=\"homenetwork\"" > /etc/conf.d/net
-echo "nis_domain_lo=\"my-nisdomain\"" > /etc/conf.d/net
+echo "hostname=\"hxp-server.hxp.plus\"" > /etc/conf.d/hostname
 emerge --noreplace net-misc/netifrc
 echo "config_ens192=\"dhcp\"" > /etc/conf.d/net
 cd /etc/init.d
