@@ -190,7 +190,7 @@ echo ":1=hxp ">> /etc/tigervnc/vncserver.users
 rc-service tigervnc start
 ```
 
-## Install a noVNC server
+## Install a noVNC server (optional)
 
 ```bash
 emerge -av novnc
