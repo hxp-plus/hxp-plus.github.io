@@ -90,13 +90,14 @@ Create a new file `/etc/httpd/conf.d/webdav.conf`:
 DavLockDB /var/www/html/DavLock
 <VirtualHost *:40443>
     DocumentRoot /var/www/html/webdav/
-    ServerName ipv6.webdav.hxp.plus
     ErrorLog /var/log/httpd/error.log
     CustomLog /var/log/httpd/access.log combined
+    LimitRequestBody 0
     SSLEngine on
     SSLCertificateFile /etc/ssl/certs/ipv6.webdav.hxp.plus.crt
     SSLCertificateKeyFile /etc/ssl/certs/ipv6.webdav.hxp.plus.key
     Alias /webdav /var/www/html/webdav
+    LimitXMLRequestBody 0
     <Directory /var/www/html/webdav>
         DAV On
         AuthType Basic
@@ -106,8 +107,6 @@ DavLockDB /var/www/html/DavLock
     </Directory>
 </VirtualHost>
 ```
-
-Change `ipv6.webdav.hxp.plus` to your server's FQDN.
 
 ## Restart Apache
 
