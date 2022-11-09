@@ -68,6 +68,7 @@ cp /etc/easy-rsa/pki/issued/hxp-manjaro.crt /etc/openvpn/server/
 cd /etc/easy-rsa
 easyrsa gen-req client1 nopass
 cp /etc/easy-rsa/pki/private/client1.key /etc/openvpn/client/
+easyrsa sign-req client client1
 cp /etc/easy-rsa/pki/issued/client1.crt /etc/openvpn/client/
 ```
 
