@@ -97,6 +97,13 @@ Open Chrome browser, visit your ESXi web url, click on the lock to download the 
 
 After a restart of Chrome browser, the ESXi web url will be shown as a secure HTTPS connection.
 
+## Alternative Method (Not tested yet on ESXi, but works on my AWX host)
+
+```bash
+AWX_HOST="awx.example.com"
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -out ./base/tls.crt -keyout ./base/tls.key -subj "/CN=${AWX_HOST}/O=${AWX_HOST}" -addext "subjectAltName = DNS:${AWX_HOST}"
+```
+
 ## References
 
 <https://www.vmwareblog.org/replace-default-esxi-ssl-certificate-self-signed-certificate-101-introduction/>
