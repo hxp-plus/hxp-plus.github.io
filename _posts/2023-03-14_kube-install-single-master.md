@@ -7,7 +7,6 @@ tags:
   - Kubernetes
   - Linux
 ---
-
 # A. Prerequisites
 
 Three CentOS 7 nodes with SELinux , swap and firewall disabled.
@@ -63,7 +62,7 @@ systemctl enable cri-docker.service
 systemctl start cri-docker.service
 systemctl enable --now cri-docker.socket
 ```
-# D. Toggle on kernel parameter and kernel modules
+# E. Toggle on kernel parameter and kernel modules
 On all nodes:
 ```
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
@@ -84,7 +83,7 @@ EOF
 # Apply sysctl params without reboot
 sudo sysctl --system
 ```
-# E. Initialize the control-plane node
+# F. Initialize the control-plane node
 On node master:
 ```
 kubeadm init --cri-socket=unix:///var/run/cri-dockerd.sock --pod-network-cidr=10.244.0.0/16
@@ -97,12 +96,12 @@ if some errors occured, use this command to roll back:
 kubeadm reset --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
 
-# F. Install flannel as Container Network Interface (CNI)
+# G. Install flannel as Container Network Interface (CNI)
 On node master:
 ```
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
-# G. Joining the nodes
+# H. Joining the nodes
 On node master, run:
 ```
 kubeadm token list
@@ -128,7 +127,7 @@ kubectl get nodes
 ```
 until the two nodes becomes ready.
 
-# H. Install kubernetes dashboard
+# I. Install kubernetes dashboard
 On master node:
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
