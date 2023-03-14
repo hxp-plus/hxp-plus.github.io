@@ -94,7 +94,7 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 if some errors occured, use this command to roll back:
 ```
-kubeadm init --cri-socket=unix:///var/run/cri-dockerd.sock
+kubeadm reset --cri-socket=unix:///var/run/cri-dockerd.sock
 ```
 
 # F. Install flannel as Container Network Interface (CNI)
