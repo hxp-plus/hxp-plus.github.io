@@ -70,6 +70,7 @@ vim awx.yaml
 ```
 ```
 ---
+---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
@@ -91,6 +92,8 @@ spec:
   - name: awx-ee
     image: registry.hxp.plus/ansible/awx-ee:latest
   control_plane_ee_image: registry.hxp.plus/ansible/awx-ee:latest
+  init_container_image: registry.hxp.plus/ansible/awx-ee
+  init_container_image_version: latest
   image_pull_secrets:
     - regcred
 ```
