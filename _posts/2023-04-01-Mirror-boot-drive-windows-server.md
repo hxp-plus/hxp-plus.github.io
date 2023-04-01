@@ -16,7 +16,7 @@ tags:
 
 Open Disk Management (Right click the Windows icon on the bottom left corner of screen, and click "Disk Management"), right click on Disk 1 and make it Online.
 
-![Activate Disk 1 in Disk Management](images/Activate%20Disk%201%20in%20Disk%20Management.png)
+![Activate Disk 1 in Disk Management](https://hxp.plus/img/images/Activate%20Disk%201%20in%20Disk%20Management.png)
 
 # Create GPT partition table on Disk 1
 
@@ -203,17 +203,17 @@ DiskPart successfully converted the selected disk to dynamic format.
 # Mirror C Drive on Disk 1
 First Delete the partition on Disk 1:
 
-![](images/Delete%20partition%20on%20Disk%201.png)
+![](https://hxp.plus/img/images/Delete%20partition%20on%20Disk%201.png)
 
 Click add mirror:
 
-![](images/Add%20mirror%201.png)
+![](https://hxp.plus/img/images/Add%20mirror%201.png)
 
-![](images/Add%20mirror%202.png)
+![](https://hxp.plus/img/images/Add%20mirror%202.png)
 
 Then the two partitions should start syncing:
 
-![](images/Mirror%20sync.png)
+![](https://hxp.plus/img/images/Mirror%20sync.png)
 
 # Clone the Recovery partition
 Assign drive letter for two recovery partitions:
@@ -350,9 +350,9 @@ And delete the copy on Disk 0:
 PS C:\Users\Administrator> Remove-Item "P:\EFI\Microsoft\Boot\BCD2"
 ```
 Then reboot and verify if there is a 'Windows Boot Manager Cloned' in your BIOS boot device list.
-![](images/Windows%20mirror%20verify%201.png)
+![](https://hxp.plus/img/images/Windows%20mirror%20verify%201.png)
 And check if boot option "Windows Server 2022 – secondary plex" boots.
-![](images/Windows%20mirror%20verify%202.png)
+![](https://hxp.plus/img/images/Windows%20mirror%20verify%202.png)
 
 # References
 <https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/create-partition-primary>
