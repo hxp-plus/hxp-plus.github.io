@@ -356,6 +356,9 @@ And check if boot option "Windows Server 2022 – secondary plex" boots.
 
 # References
 <https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/create-partition-primary>
+
 <https://www.clouvider.com/knowledge_base/how-to-make-raid-1-on-windows-server/>
+
 <https://www.thewindowsclub.com/mirror-boot-hard-drive-windows-10>
+
 <https://woshub.com/software-boot-mirror-gpt-windows/>
