@@ -15,9 +15,10 @@ Check KMS server statue by:
 ```
 slmgr /dlv
 ```
-Get an sctivation key from  and run:
+Get an activation key and run:
 ```
-slmgr /ipk slmgr /ato
+slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+slmgr /ato
 ```
 Windows 11/10 Product Key:
 
